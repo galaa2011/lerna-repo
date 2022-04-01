@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build": "lerna run --stream --sort build",
+    "version": "lerna version",
+    "publish": "yarn run build && lerna publish from-package"
   },
   "config": {
     "commitizen": {
